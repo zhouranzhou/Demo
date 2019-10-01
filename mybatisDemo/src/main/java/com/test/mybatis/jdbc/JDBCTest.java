@@ -1,4 +1,4 @@
-package com.test.JDBCTEST;
+package com.test.mybatis.jdbc;
 
 import java.sql.*;
 
