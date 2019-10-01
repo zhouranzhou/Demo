@@ -49,7 +49,7 @@ public class JDBCTest {
 
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
+        } finally {//关闭连接，释放资源
             if (rs != null) {
                 rs.close();
             }
@@ -66,3 +66,24 @@ public class JDBCTest {
     }
 
 }
+
+
+//jdbc缺点：结果集数据类型 需要手动判断；列名需要手动输入
+//创建数据库表：
+//DROP TABLE IF EXISTS tb_user;
+//        CREATE TABLE tb_user (
+//        id int(32) NOT NULL,
+//        userName varchar(32) DEFAULT NULL,
+//        password varchar(32) DEFAULT NULL,
+//        name varchar(32) DEFAULT NULL,
+//        age int(10) DEFAULT NULL,
+//        sex int(2) DEFAULT NULL,
+//        birthday date DEFAULT NULL,
+//        created datetime DEFAULT NULL,
+//        updated datetime DEFAULT NULL,
+//        PRIMARY KEY (id)
+//        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+//
+//
+//        INSERT INTO ssmdemo.tb_user ( userName, password, name, age, sex, birthday, created, updated) VALUES ( 'zpc', '123456', '鹏程', '22', '1', '1990-09-02', sysdate(), sysdate());
+//        INSERT INTO ssmdemo.tb_user ( userName, password, name, age, sex, birthday, created, updated) VALUES ( 'hj', '123456', '静静', '22', '1', '1993-09-05', sysdate(), sysdate());
