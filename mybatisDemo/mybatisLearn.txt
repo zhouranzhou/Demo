@@ -34,6 +34,9 @@ package包名解释：
 
 字体设置为：font字体改成Monospaced，解决粘贴过来的文字部分不显示
 
+创建测试类的快捷操作：
+1.点下接口实现类：UserMapper，Alt+Enter 快捷键，选择：Create Test---选择testng
+
 
 
 
